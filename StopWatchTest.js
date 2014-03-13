@@ -1,4 +1,4 @@
-// Java Document
+
 // 0/1 = start/end
 // 2 = state
 // 3 = length, ms

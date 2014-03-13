@@ -1,23 +1,23 @@
 var app = {
-    // Application Constructor
+    // SETTING UP THE CAM
     initialize: function() {
         this.bindEvents();
     },
-    // Bind Event Listeners
+    //  Event Listeners
     //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
+    // Bind any events that are required on startup.
+    // INZELISING THE DEVICE READY FUNCTION.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
-    // deviceready Event Handler
+    //  THIS = THE EVEN THAT IS NEEDED AND IS BEING CALLED
     //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicity call 'app.receivedEvent(...);'
+    // 
+    // CALLING APP.RECIVED FOR MAKINF THE DEVICE READY;'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
-    // Update DOM on a Received Event
+    // CHECKING AND ADDING THE DOM FOR THE EVENT RESEAVED
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
@@ -28,7 +28,7 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
-
+//TAKING THE APP AND DVICE TO THE CAM FUNCATION 
     takePicture: function() {
       navigator.camera.getPicture( function( imageURI ) {
         alert( imageURI );

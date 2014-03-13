@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>small-t managment system</title>
+
+<!--SCRIPTS USED FOR FUNCATIONS AND CSS.... SOME SCRIPTS ARE LOCALED THOUGH OUT THE DOCUMENT DUE TO HOW THE CODE FUNCATIONS.-->
 <link href="jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
 <link href="jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
 <script src="jquery-1.6.4.min.js" type="text/javascript"></script>
@@ -15,7 +17,7 @@
 <script type="text/javascript" src="phonegap.js"></script>
 </head> 
 <body> 
-
+<!--NAVIGATION PAGE AFTER LOGIN-->
 <div data-role="page" id="page">
 	<div data-role="header">
 		<h1> Managment Console</h1>
@@ -44,8 +46,9 @@
 
         
 	</div>
+    <!--STOPWATCH JAVA SCRIPT LINK-->
     <script src="StopWatchTest.js" type="text/javascript"></script>
-    
+    <!--STARTING OF THE HTML SIDE TO THE STOPWATCH, WITH THE STOP/START AND CLEAR BUTTON FOR USERS-->
    <body onload='load();'>
 
 
@@ -54,6 +57,7 @@
 	<input type='text' id='disp' />
 	<button type='button' onclick='r()' onfocus='this.blur()'>Reset</button>
 </div>
+<!--DYNAMIC TABLE THAT DISPLAYED THE REUSLTS FROM THE STOPWATCH-->
 <table border='1'>
 	<tr><th>Lap #</th><th>This Lap</th><th>Running Total</th></tr>
 	<tbody id='lap'></tbody>
@@ -145,16 +149,16 @@ _gaq.push(['_trackPageview']);
 	  <div data-role="collapsible-set">
 	    <div data-role="collapsible">
         
-        <!--adding swimmer form, this allows swimmers details to be added to the datbase -->
+        <!--adding swimmer form, this allows swimmers details to be added to the datbase LINKING THE DATA FROM THE TEXT INPUTS AND PASSING TO THE PHP SCRIPT (SERVER SIDE) -->
 	      <h3>Add Swimmer</h3>
 	   
-       <form id="myForm" action="http://192.168.0.101/smallt/addingSwimmers.php" method="post">
+       <form id="AddSwimmer" action="http://192.168.0.101/smallt/addingSwimmers.php" method="post">
 Name: <input type="text" name="swimmerName" /><br />
 Age : <input type="text" name="swimmerAge" /><br />
 <button id="sub">Save</button>
 <input type="reset" value="Reset" />
 </form>
-
+<!--CAM FUNCTION ALLOW USERS TO TAKE IMAGES-->
 <div class="app">
 <button onclick="app.takePicture();">Take Picture</button>
 </div>
@@ -163,7 +167,7 @@ Age : <input type="text" name="swimmerAge" /><br />
 <script type="text/javascript">
             app.initialize();
         </script>
-        
+        <!--DISPLAYS MESSAGE FROM PHP SCRIPT STATING IF THE DETAILS HAVE BEEN ADDED OR NOT-->
 <span id="result"></s>
 
 
@@ -173,12 +177,12 @@ Age : <input type="text" name="swimmerAge" /><br />
 	   
 	    <div data-role="collapsible" data-collapsed="true">
 	      <h3>View Swimmers List</h3>
+          <!--JS USED TO DISPLAY A LIST OF SWIMMERS DETAILS THAT HAVE BEEN SORCED FROM THE JS LINKED TO THE SERVER SIDE PHP-->
           <script src="listOfSwimmersScript.js" type="text/javascript"></script>
-          
+          <!--LIST OF SWIMMERS SHALL BE SHOWN HERE-->
           <ul data-role="gridview" id="listofswimmers">
           </ul>
           
-	      <p>Content</p>
         </div>
       </div>	
     
