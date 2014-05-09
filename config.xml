@@ -22,6 +22,7 @@ beata testing fase , being most elements togther .. not all is working fully but
 
 <!--configuration for cam access-->
  <gap:plugin name="org.apache.cordova.core.camera" />
+ <gap:plugin name="org.apache.cordova.camera" version="0.2.9" />
  
 <!-- details on author and form of contACT -->
 <author href="https://www.facebook.com/christopher.murrell.397" email="c.murrell93@live.co.uk">
